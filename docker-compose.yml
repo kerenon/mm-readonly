@@ -1,0 +1,23 @@
+services:
+  mm-readonly:
+    build: .
+    image: git.kerenon.com/kerenon/mm-readonly
+    container_name: mm-readonly
+    restart: unless-stopped
+    environment:
+      # Channel whitelist syntax
+      # WHITELIST_channel_id=user_id1,user_id2,user_id3,...
+      # Users with specified IDs have write access. Messages from any other user is deleted, but replies to posts (threads) are enabled
+      # Example:
+      - WHITELIST_a9hxj9kz4dr13x5eqshcet3kiw=o30trtan3i85pytf51zg4j8msy
+      # Mattermost server url
+      - MM_URL=10.100.0.3
+      # Mattermost bot token
+      - MM_TOKEN=cyieh7um9jd9tm778u4rcxeqto
+      # Mattermost server port
+      - MM_PORT=8065
+      # Mattermost server access scheme (http/https)
+      - MM_SCHEME=http
+      # Enable debug mode
+      - MM_DEBUG=False
+      - PYTHONUNBUFFERED=1
