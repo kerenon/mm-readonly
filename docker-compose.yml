@@ -1,7 +1,7 @@
 services:
   mm-readonly:
     build: .
-    image: mm-readonly
+    image: docker.io/library/mm-readonly:latest
     container_name: mm-readonly
     restart: unless-stopped
     environment:
