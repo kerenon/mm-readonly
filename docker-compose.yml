@@ -1,7 +1,7 @@
 services:
   mm-readonly:
     build: .
-    image: git.kerenon.com/kerenon/mm-readonly
+    image: mm-readonly
     container_name: mm-readonly
     restart: unless-stopped
     environment:
