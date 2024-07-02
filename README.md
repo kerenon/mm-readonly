@@ -1,6 +1,6 @@
 # mm-readonly
 ## About
-The free version of Mattermost does not allow you to create read only channels. To solve this problem, I created this very minimalistic bot. After adding to channels, the bot listens to message post events and checks if the posting user is on the channels whitelist. If not, the message gets deleted almost instantly.
+The free version of Mattermost does not allow you to create read only channels. To solve this problem, I created this very minimalistic bot. After adding to channels, the bot listens to message post events and checks if the posting user is on the channels whitelist. If not, the message gets deleted almost instantly. Replies to existing posts (threads) are allowed.
 
 ## Configuration
 Configuration is done entirely using environment variables:
